@@ -68,6 +68,7 @@ Partial Class mainForm
         Me.lblStartDate = New System.Windows.Forms.Label()
         Me.lblEndDate = New System.Windows.Forms.Label()
         Me.btnReconcile = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.trainingMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -89,7 +90,7 @@ Partial Class mainForm
         Me.dtpEntryDate.Location = New System.Drawing.Point(12, 131)
         Me.dtpEntryDate.Name = "dtpEntryDate"
         Me.dtpEntryDate.Size = New System.Drawing.Size(111, 26)
-        Me.dtpEntryDate.TabIndex = 1
+        Me.dtpEntryDate.TabIndex = 0
         '
         'lblPay
         '
@@ -124,7 +125,7 @@ Partial Class mainForm
         Me.txtPayee.Location = New System.Drawing.Point(157, 191)
         Me.txtPayee.Name = "txtPayee"
         Me.txtPayee.Size = New System.Drawing.Size(300, 26)
-        Me.txtPayee.TabIndex = 5
+        Me.txtPayee.TabIndex = 2
         '
         'txtDebit
         '
@@ -132,7 +133,7 @@ Partial Class mainForm
         Me.txtDebit.Location = New System.Drawing.Point(479, 191)
         Me.txtDebit.Name = "txtDebit"
         Me.txtDebit.Size = New System.Drawing.Size(74, 26)
-        Me.txtDebit.TabIndex = 7
+        Me.txtDebit.TabIndex = 3
         '
         'txtCredit
         '
@@ -140,14 +141,14 @@ Partial Class mainForm
         Me.txtCredit.Location = New System.Drawing.Point(567, 191)
         Me.txtCredit.Name = "txtCredit"
         Me.txtCredit.Size = New System.Drawing.Size(74, 26)
-        Me.txtCredit.TabIndex = 9
+        Me.txtCredit.TabIndex = 4
         '
         'btnClear
         '
         Me.btnClear.Location = New System.Drawing.Point(62, 473)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(86, 29)
-        Me.btnClear.TabIndex = 10
+        Me.btnClear.TabIndex = 5
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
         '
@@ -156,7 +157,7 @@ Partial Class mainForm
         Me.btnCalc.Location = New System.Drawing.Point(363, 473)
         Me.btnCalc.Name = "btnCalc"
         Me.btnCalc.Size = New System.Drawing.Size(86, 29)
-        Me.btnCalc.TabIndex = 11
+        Me.btnCalc.TabIndex = 7
         Me.btnCalc.Text = "Calculate"
         Me.btnCalc.UseVisualStyleBackColor = True
         '
@@ -165,7 +166,7 @@ Partial Class mainForm
         Me.btnApply.Location = New System.Drawing.Point(517, 473)
         Me.btnApply.Name = "btnApply"
         Me.btnApply.Size = New System.Drawing.Size(86, 29)
-        Me.btnApply.TabIndex = 12
+        Me.btnApply.TabIndex = 8
         Me.btnApply.Text = "Apply"
         Me.btnApply.UseVisualStyleBackColor = True
         '
@@ -174,7 +175,7 @@ Partial Class mainForm
         Me.btnClose.Location = New System.Drawing.Point(682, 473)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(86, 29)
-        Me.btnClose.TabIndex = 13
+        Me.btnClose.TabIndex = 9
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
@@ -185,7 +186,7 @@ Partial Class mainForm
         Me.lblPrevBal.Location = New System.Drawing.Point(703, 153)
         Me.lblPrevBal.Name = "lblPrevBal"
         Me.lblPrevBal.Size = New System.Drawing.Size(100, 23)
-        Me.lblPrevBal.TabIndex = 17
+        Me.lblPrevBal.TabIndex = 10
         '
         'lblTransAction
         '
@@ -194,7 +195,7 @@ Partial Class mainForm
         Me.lblTransAction.Location = New System.Drawing.Point(703, 193)
         Me.lblTransAction.Name = "lblTransAction"
         Me.lblTransAction.Size = New System.Drawing.Size(100, 23)
-        Me.lblTransAction.TabIndex = 18
+        Me.lblTransAction.TabIndex = 11
         '
         'lblNewBal
         '
@@ -203,7 +204,7 @@ Partial Class mainForm
         Me.lblNewBal.Location = New System.Drawing.Point(703, 241)
         Me.lblNewBal.Name = "lblNewBal"
         Me.lblNewBal.Size = New System.Drawing.Size(100, 23)
-        Me.lblNewBal.TabIndex = 19
+        Me.lblNewBal.TabIndex = 12
         '
         'lblLine
         '
@@ -232,7 +233,7 @@ Partial Class mainForm
         Me.txtPreview.Multiline = True
         Me.txtPreview.Name = "txtPreview"
         Me.txtPreview.Size = New System.Drawing.Size(791, 113)
-        Me.txtPreview.TabIndex = 22
+        Me.txtPreview.TabIndex = 13
         '
         'lblPreview
         '
@@ -360,7 +361,7 @@ Partial Class mainForm
         Me.cmboxType.Location = New System.Drawing.Point(12, 191)
         Me.cmboxType.Name = "cmboxType"
         Me.cmboxType.Size = New System.Drawing.Size(121, 26)
-        Me.cmboxType.TabIndex = 3
+        Me.cmboxType.TabIndex = 1
         '
         'lblProjectID
         '
@@ -443,15 +444,25 @@ Partial Class mainForm
         Me.btnReconcile.Location = New System.Drawing.Point(207, 473)
         Me.btnReconcile.Name = "btnReconcile"
         Me.btnReconcile.Size = New System.Drawing.Size(86, 29)
-        Me.btnReconcile.TabIndex = 32
+        Me.btnReconcile.TabIndex = 6
         Me.btnReconcile.Text = "Reconcile"
         Me.btnReconcile.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label1.Location = New System.Drawing.Point(704, 230)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(100, 2)
+        Me.Label1.TabIndex = 33
         '
         'mainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(825, 535)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnReconcile)
         Me.Controls.Add(Me.lblEndDate)
         Me.Controls.Add(Me.lblStartDate)
@@ -542,5 +553,6 @@ Partial Class mainForm
     Friend WithEvents lblStartDate As System.Windows.Forms.Label
     Friend WithEvents lblEndDate As System.Windows.Forms.Label
     Friend WithEvents btnReconcile As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class

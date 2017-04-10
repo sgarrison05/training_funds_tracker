@@ -46,7 +46,7 @@ Partial Class trainingIDForm
         Me.dtpTrainingStart.Location = New System.Drawing.Point(114, 235)
         Me.dtpTrainingStart.Name = "dtpTrainingStart"
         Me.dtpTrainingStart.Size = New System.Drawing.Size(122, 26)
-        Me.dtpTrainingStart.TabIndex = 5
+        Me.dtpTrainingStart.TabIndex = 3
         '
         'dtpTrainingEnd
         '
@@ -58,7 +58,7 @@ Partial Class trainingIDForm
         Me.dtpTrainingEnd.Location = New System.Drawing.Point(114, 276)
         Me.dtpTrainingEnd.Name = "dtpTrainingEnd"
         Me.dtpTrainingEnd.Size = New System.Drawing.Size(122, 26)
-        Me.dtpTrainingEnd.TabIndex = 7
+        Me.dtpTrainingEnd.TabIndex = 4
         '
         'lblTrainStart
         '
@@ -66,7 +66,7 @@ Partial Class trainingIDForm
         Me.lblTrainStart.Location = New System.Drawing.Point(16, 248)
         Me.lblTrainStart.Name = "lblTrainStart"
         Me.lblTrainStart.Size = New System.Drawing.Size(58, 13)
-        Me.lblTrainStart.TabIndex = 4
+        Me.lblTrainStart.TabIndex = 9
         Me.lblTrainStart.Text = "Start Date:"
         '
         'lblTrainEnd
@@ -75,7 +75,7 @@ Partial Class trainingIDForm
         Me.lblTrainEnd.Location = New System.Drawing.Point(16, 289)
         Me.lblTrainEnd.Name = "lblTrainEnd"
         Me.lblTrainEnd.Size = New System.Drawing.Size(55, 13)
-        Me.lblTrainEnd.TabIndex = 6
+        Me.lblTrainEnd.TabIndex = 10
         Me.lblTrainEnd.Text = "End Date:"
         '
         'lblTrainingName
@@ -84,7 +84,7 @@ Partial Class trainingIDForm
         Me.lblTrainingName.Location = New System.Drawing.Point(16, 155)
         Me.lblTrainingName.Name = "lblTrainingName"
         Me.lblTrainingName.Size = New System.Drawing.Size(91, 13)
-        Me.lblTrainingName.TabIndex = 0
+        Me.lblTrainingName.TabIndex = 7
         Me.lblTrainingName.Text = "Name of Training:"
         '
         'lblTrainLocation
@@ -93,7 +93,7 @@ Partial Class trainingIDForm
         Me.lblTrainLocation.Location = New System.Drawing.Point(16, 192)
         Me.lblTrainLocation.Name = "lblTrainLocation"
         Me.lblTrainLocation.Size = New System.Drawing.Size(51, 13)
-        Me.lblTrainLocation.TabIndex = 2
+        Me.lblTrainLocation.TabIndex = 8
         Me.lblTrainLocation.Text = "Location:"
         '
         'txtTrainingName
@@ -110,14 +110,14 @@ Partial Class trainingIDForm
         Me.txtTrainingLocation.Location = New System.Drawing.Point(114, 192)
         Me.txtTrainingLocation.Name = "txtTrainingLocation"
         Me.txtTrainingLocation.Size = New System.Drawing.Size(221, 26)
-        Me.txtTrainingLocation.TabIndex = 3
+        Me.txtTrainingLocation.TabIndex = 2
         '
         'btnDone
         '
         Me.btnDone.Location = New System.Drawing.Point(284, 361)
         Me.btnDone.Name = "btnDone"
         Me.btnDone.Size = New System.Drawing.Size(91, 33)
-        Me.btnDone.TabIndex = 8
+        Me.btnDone.TabIndex = 5
         Me.btnDone.Text = "Done"
         Me.btnDone.UseVisualStyleBackColor = True
         '
@@ -127,7 +127,7 @@ Partial Class trainingIDForm
         Me.txtJPOName.Location = New System.Drawing.Point(114, 111)
         Me.txtJPOName.Name = "txtJPOName"
         Me.txtJPOName.Size = New System.Drawing.Size(221, 26)
-        Me.txtJPOName.TabIndex = 10
+        Me.txtJPOName.TabIndex = 0
         '
         'lblOfficerName
         '
@@ -135,7 +135,7 @@ Partial Class trainingIDForm
         Me.lblOfficerName.Location = New System.Drawing.Point(16, 114)
         Me.lblOfficerName.Name = "lblOfficerName"
         Me.lblOfficerName.Size = New System.Drawing.Size(84, 13)
-        Me.lblOfficerName.TabIndex = 9
+        Me.lblOfficerName.TabIndex = 6
         Me.lblOfficerName.Text = "Attendee Name:"
         '
         'lblTitle
@@ -149,9 +149,11 @@ Partial Class trainingIDForm
         '
         'trainingIDForm
         '
+        Me.AcceptButton = Me.btnDone
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(387, 406)
+        Me.ControlBox = False
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.txtJPOName)
         Me.Controls.Add(Me.lblOfficerName)

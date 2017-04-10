@@ -34,7 +34,6 @@ Public Class mainForm
         Me.cmboxType.Items.Add("ATM")
         Me.cmboxType.Items.Add("Debit")
         Me.cmboxType.Items.Add("Dep")
-        Me.cmboxType.Items.Add("EFT")
         Me.cmboxType.Items.Add("Wthdrw")
         Me.cmboxType.Items.Add("Txfr")
 
@@ -141,11 +140,14 @@ Public Class mainForm
                 Me.lblName.Text = "New Project"
                 Me.lblName.ForeColor = Color.Blue
 
+
                 'user has decided not to enter a intial balance and closes the form
             Else : button = Windows.Forms.DialogResult.No
+
                 Me.Close()
+
+                End If
             End If
-        End If
 
         'prevents accidental entries till previewed.
         Me.btnApply.Enabled = False
@@ -232,7 +234,7 @@ Public Class mainForm
 
     Private Sub ExitToolStripMenuItem_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ExitToolStripMenuItem.Click
 
-        Me.Close()
+        CloseApp()
 
     End Sub
 
@@ -297,19 +299,20 @@ Public Class mainForm
 
     Private Sub cmboxType_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmboxType.TextChanged
 
-        If IsNumeric(Me.cmboxType.Text) And Me.cmboxType.SelectedIndex = 0 Or Me.cmboxType.SelectedIndex = 6 Then
+        If Me.cmboxType.SelectedIndex = 0 Or Me.cmboxType.SelectedIndex = 5 Then
             Me.txtDebit.Enabled = True
             Me.txtCredit.Enabled = True
-        End If
-        If IsNumeric(Me.cmboxType.Text) And Me.cmboxType.SelectedIndex = 1 Or Me.cmboxType.SelectedIndex = 2 Or _
-        Me.cmboxType.SelectedIndex = 4 Or Me.cmboxType.SelectedIndex = 5 Then
-            Me.txtCredit.Enabled = False
+
+        ElseIf Me.cmboxType.SelectedIndex = 1 Or Me.cmboxType.SelectedIndex = 2 Or _
+        Me.cmboxType.SelectedIndex = 4 Then
             Me.txtDebit.Enabled = True
-        End If
-        If IsNumeric(Me.cmboxType.Text) And Me.cmboxType.SelectedIndex = 3 Then
+            Me.txtCredit.Enabled = False
+
+        ElseIf Me.cmboxType.SelectedIndex = 3 Then
             Me.txtDebit.Enabled = False
             Me.txtCredit.Enabled = True
         End If
+
     End Sub
 
     Private Sub ReadMeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ReadMeToolStripMenuItem.Click
@@ -626,12 +629,14 @@ Public Class mainForm
         MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If exitButton = Windows.Forms.DialogResult.No Then
 
+
             'clears everything and returns to the form
             Initialize_Form()
 
 
         Else 'exits the program
             exitButton = Windows.Forms.DialogResult.Yes
+
             Me.Close()
 
         End If
@@ -653,6 +658,25 @@ Public Class mainForm
         Me.dtpEntryDate.Focus()
 
         Me.btnApply.Enabled = False
+
+    End Sub
+
+    Private Sub mainForm_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.FormClosing
+
+
+        'To delete trainingrun.txt if an initial transation is not put in the file
+        'If both are missing due to not completing the input box, then the app just closes
+        If Not My.Computer.FileSystem.FileExists(fileLocation & "training.txt") And _
+            Not My.Computer.FileSystem.FileExists(fileLocation & "trainingrun.txt") Then
+
+            Exit Sub
+        Else
+            If Not My.Computer.FileSystem.FileExists(fileLocation & "training.txt") Then
+                My.Computer.FileSystem.DeleteFile(fileLocation & "trainingrun.txt")
+
+            End If
+
+        End If
 
     End Sub
 End Class
