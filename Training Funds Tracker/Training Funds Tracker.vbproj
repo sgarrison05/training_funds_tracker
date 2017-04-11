@@ -78,6 +78,12 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="reconcileForm.Designer.vb">
+      <DependentUpon>reconcileForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reconcileForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="reconcileForm.resx">
+      <DependentUpon>reconcileForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>mainForm.vb</DependentUpon>

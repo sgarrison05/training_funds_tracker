@@ -8,7 +8,7 @@
 Option Explicit On
 Imports System.Globalization
 
-Public Class mainForm
+Public Class frmMain
 
     Private title As String = "Training Funds Tracker"
     Private newDailyBalance As Decimal
@@ -146,8 +146,8 @@ Public Class mainForm
 
                 Me.Close()
 
-                End If
             End If
+        End If
 
         'prevents accidental entries till previewed.
         Me.btnApply.Enabled = False
@@ -330,7 +330,7 @@ Public Class mainForm
             Me.dtpEntryDate.Focus()
 
         End If
-        
+
 
     End Sub
 
@@ -677,6 +677,13 @@ Public Class mainForm
             End If
 
         End If
+
+    End Sub
+
+    Private Sub btnReconcile_Click(sender As Object, e As EventArgs) Handles btnReconcile.Click
+
+        Me.Hide()
+        frmReconcile.Show()
 
     End Sub
 End Class

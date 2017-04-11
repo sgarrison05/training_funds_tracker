@@ -1,5 +1,5 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class mainForm
+Partial Class frmMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -457,7 +457,7 @@ Partial Class mainForm
         Me.Label1.Size = New System.Drawing.Size(100, 2)
         Me.Label1.TabIndex = 33
         '
-        'mainForm
+        'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -498,7 +498,7 @@ Partial Class mainForm
         Me.Controls.Add(Me.trainingMenuStrip)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.trainingMenuStrip
-        Me.Name = "mainForm"
+        Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Training Funds Tracker"
         Me.trainingMenuStrip.ResumeLayout(False)
