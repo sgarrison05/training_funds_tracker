@@ -33,7 +33,7 @@ Public Class frmMain
         Me.cmboxType.Items.Add("[Enter No.]")
         Me.cmboxType.Items.Add("ATM")
         Me.cmboxType.Items.Add("Debit")
-        Me.cmboxType.Items.Add("Dep")
+        Me.cmboxType.Items.Add("Deposit")
         Me.cmboxType.Items.Add("Wthdrw")
         Me.cmboxType.Items.Add("Txfr")
 
@@ -331,11 +331,6 @@ Public Class frmMain
 
         End If
 
-
-    End Sub
-
-    Private Sub InfoFormToolStripMenuItem_Click(ByVal sender As Object, ByVal e As System.EventArgs)
-        trainingIDForm.ShowDialog()
 
     End Sub
 
@@ -668,14 +663,11 @@ Public Class frmMain
         'If both are missing due to not completing the input box, then the app just closes
         If Not My.Computer.FileSystem.FileExists(fileLocation & "training.txt") And _
             Not My.Computer.FileSystem.FileExists(fileLocation & "trainingrun.txt") Then
-
             Exit Sub
         Else
             If Not My.Computer.FileSystem.FileExists(fileLocation & "training.txt") Then
                 My.Computer.FileSystem.DeleteFile(fileLocation & "trainingrun.txt")
-
             End If
-
         End If
 
     End Sub

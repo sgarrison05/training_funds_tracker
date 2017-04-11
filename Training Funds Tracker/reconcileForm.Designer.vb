@@ -26,7 +26,7 @@ Partial Class frmReconcile
         Me.gpboxOptions = New System.Windows.Forms.GroupBox()
         Me.btnReturn = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnReconcile = New System.Windows.Forms.Button()
         Me.gpboxOptions.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,7 +45,7 @@ Partial Class frmReconcile
         Me.gpboxOptions.BackColor = System.Drawing.Color.Green
         Me.gpboxOptions.Controls.Add(Me.btnReturn)
         Me.gpboxOptions.Controls.Add(Me.btnClear)
-        Me.gpboxOptions.Controls.Add(Me.Button1)
+        Me.gpboxOptions.Controls.Add(Me.btnReconcile)
         Me.gpboxOptions.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.gpboxOptions.Location = New System.Drawing.Point(731, 56)
         Me.gpboxOptions.Name = "gpboxOptions"
@@ -74,15 +74,15 @@ Partial Class frmReconcile
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnReconcile
         '
-        Me.Button1.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Button1.Location = New System.Drawing.Point(9, 28)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(86, 42)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Reconcile"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnReconcile.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.btnReconcile.Location = New System.Drawing.Point(9, 28)
+        Me.btnReconcile.Name = "btnReconcile"
+        Me.btnReconcile.Size = New System.Drawing.Size(86, 42)
+        Me.btnReconcile.TabIndex = 0
+        Me.btnReconcile.Text = "Reconcile"
+        Me.btnReconcile.UseVisualStyleBackColor = True
         '
         'frmReconcile
         '
@@ -104,5 +104,5 @@ Partial Class frmReconcile
     Friend WithEvents gpboxOptions As System.Windows.Forms.GroupBox
     Friend WithEvents btnReturn As System.Windows.Forms.Button
     Friend WithEvents btnClear As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnReconcile As System.Windows.Forms.Button
 End Class

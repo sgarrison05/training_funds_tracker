@@ -35,8 +35,9 @@
                 'get each line
                 entry = readtxt.Substring(entryIndex, newLineIndex - entryIndex)
 
-                'finds every line with a year in it
-                entryYr = entry.Contains("/")
+                'finds every line with a keyword in it
+                entryYr = entry.Contains("Debit") Or entry.Contains("ATM") Or entry.Contains("Deposit") _
+                    Or entry.Contains("Wthdrw") Or entry.Contains("Txfr")
 
                 'if found, it adds it to the listbox
                 If entryYr = True Then
