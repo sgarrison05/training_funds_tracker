@@ -678,4 +678,26 @@ Public Class frmMain
         frmReconcile.Show()
 
     End Sub
+
+    Private Sub btnTest_String_Cap_Click(sender As Object, e As EventArgs) Handles btnTest_String_Cap.Click
+
+        'attempt to search for final entry to pull to bank file
+        If My.Computer.FileSystem.FileExists(fileLocation & "trainingrun.txt") Then
+
+            Dim txt As String = "" 'line 
+            Dim bnkStr As String = "" 'what you are looking for
+            Dim bnkIndex As Integer = 0 'number of characters of the entry you want to collect
+            Dim newLineIndex As Integer = 0 'index of the end of line
+
+
+
+
+
+
+            MessageBox.Show(bnkStr, "Is this it?", MessageBoxButtons.OK, _
+                            MessageBoxIcon.Question)
+
+        End If
+
+    End Sub
 End Class
